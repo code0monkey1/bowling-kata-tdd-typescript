@@ -38,6 +38,14 @@
 
 ---
 
+### Case 5 : Perfect Game 
+#### ( i.e When you score 10 pins on every ball )
+
+![TDD](pictures/perfect.png  'prefect score') 
+
+> The pefect score you could achieve in bowling is 300
+
+---
 
 Config : 
 
