@@ -31,7 +31,15 @@ describe('Bowling Game',()=>{
 
    test("should score 9 for a set with 5 and 4 , and the rest gutters",()=>{
 
+        // Arrange 
+         const sut= new Game()
 
+        // Act
+        sut.roll(4);
+        sut.roll(5);
+
+        // Assert
+        expect(sut.score).toEqual(9)
     
    })
 
