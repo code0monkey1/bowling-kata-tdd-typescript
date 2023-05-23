@@ -6,11 +6,19 @@
 ---
 
 ### Case 1 : When the ball goes to the gutter 
-##### ( i.e No points scored )
+##### ( i.e No points scored : Ball goes into gutter every time)
 
 ![TDD](pictures/gutter-game.png 'test driven development')
 
 
+---
+
+### Case 2 : All ones game 
+##### (i.e When every ball knocks off 1 pin )
+
+![TDD](pictures/all-ones.png 'test driven development')
+
+---
 
 Config : 
 
