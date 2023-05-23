@@ -17,28 +17,28 @@ class Game{
 
    const FRAMES=10
    
-   let frame_index=0
+   let roll_index=0
 
     for( let frame=0;frame<FRAMES;frame++){
        
-        if(this.isSpare(frame_index)){
+        if(this.isSpare(roll_index)){
             
-            score= 10+this._rolls[frame_index+2]
-            frame_index+=2
+            score= 10+this._rolls[roll_index+2]
+            roll_index+=2
 
           }
-        else if(this.isStrike(frame_index)){
+        else if(this.isStrike(roll_index)){
             score+=10
-                    +this._rolls[frame_index+1]
-                    +this._rolls[frame_index+2]
+                    +this._rolls[roll_index+1]
+                    +this._rolls[roll_index+2]
 
-            frame_index++ 
+            roll_index++ 
         }
         else{
 
-          score+= this._rolls[frame_index]+
-                         this._rolls[frame_index+1]
-           frame_index+=2
+          score+= this._rolls[roll_index]+
+                         this._rolls[roll_index+1]
+           roll_index+=2
         }
          
     }
