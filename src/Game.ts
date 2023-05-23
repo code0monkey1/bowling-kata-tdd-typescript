@@ -10,22 +10,23 @@ class Game{
   private currentRollIndex=0
 
   get score(){
-     
-    const FRAMES = 10
-    let ROLL_INDEX=0
 
-    while(ROLL_INDEX<FRAMES){
-        
-       if(this._rolls[ROLL_INDEX]+this._rolls[ROLL_INDEX+1]===10){
-          this._score+=10+this._rolls[ROLL_INDEX+2]
-       }
-       else{
-        this._score+=this._rolls[ROLL_INDEX]+this._rolls[ROLL_INDEX+1]
-       }
+   const FRAMES=10
+   
+   let CHANCE_INDEX=0
 
-       ROLL_INDEX+=2
-        
+   const SPARE=10
+
+    for( let frame=0;frame<FRAMES;frame++){
+       
+        if(this._rolls[CHANCE_INDEX]+this._rolls[CHANCE_INDEX+1]===SPARE){
+
+          
+
+        }
+         
     }
+
 
     return this._score
      
