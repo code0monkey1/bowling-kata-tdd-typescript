@@ -2,6 +2,9 @@
 
 ![TDD](pictures/bowling-kata.png 'test driven development')
 
+[Game Class Source Link](./src/Game.ts)
+
+[Test Cases](./tests/Game.test.ts)
 
 ---
 
