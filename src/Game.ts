@@ -5,43 +5,42 @@
  */
 class Game{
    
-  private _score:number=0;
-  
   private _rolls:number[] = Array(21).fill(0)
 
-  private currentRollIndex=0
+  private currentRoll=0
 
   get score(){
+   
+   let score =0
 
    const FRAMES=10
    
-   let roll_index=0
+   let i=0
 
     for( let frame=0;frame<FRAMES;frame++){
        
-        if(this.isSpare(roll_index,roll_index+1)){
+        if(this.isSpare(i,i+1)){
             
-            
-            this._score= 10+this._rolls[roll_index+2]
-            roll_index+=2
+            score= 10+this._rolls[i+2]
+            i+=2
 
           }
         else{
 
-           this._score+= this._rolls[roll_index]+
-                         this._rolls[roll_index+1]
-           roll_index+=2
+          score+= this._rolls[i]+
+                         this._rolls[i+1]
+           i+=2
         }
          
     }
 
-    return this._score
+    return score
      
   }
 
     public roll(pins:number){
 
-    this._rolls[this.currentRollIndex++]=pins
+      this._rolls[this.currentRoll++]=pins
 
     }
 
