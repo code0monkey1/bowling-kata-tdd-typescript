@@ -59,6 +59,22 @@ describe('Bowling Game',()=>{
 
    })
 
+   test("should score 28 for a strike followed by scores 5 , 4",()=>{  
+
+    //Arrange
+    const sut=game
+
+    //Act
+    rollStrike()
+    game.roll(5)
+    game.roll(4)
+
+    //Assert
+
+     expect(game.score).toBe(28)
+
+   })
+
    const rollMany=(rolls:number,pins:number)=>{
    
     for(let i=0;i<rolls;i++){
@@ -70,6 +86,10 @@ describe('Bowling Game',()=>{
    const rollSpare=()=>{
       game.roll(5)
       game.roll(5)
+   }
+
+   const rollStrike=()=>{
+    game.roll(10)
    }
 
 
