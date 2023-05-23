@@ -15,25 +15,25 @@ class Game{
 
    const FRAMES=10
    
-   let CHANCE_INDEX=0
+   let roll_index=0
 
     for( let frame=0;frame<FRAMES;frame++){
        
-        if(this.isSpare(CHANCE_INDEX,CHANCE_INDEX+1)){
-           
-            this._score= 10+this._rolls[CHANCE_INDEX+2]
-            CHANCE_INDEX+=2
+        if(this.isSpare(roll_index,roll_index+1)){
+            
+            
+            this._score= 10+this._rolls[roll_index+2]
+            roll_index+=2
 
           }
         else{
 
-           this._score+= this._rolls[CHANCE_INDEX]+
-                         this._rolls[CHANCE_INDEX+1]
-           CHANCE_INDEX+=2
+           this._score+= this._rolls[roll_index]+
+                         this._rolls[roll_index+1]
+           roll_index+=2
         }
          
     }
-
 
     return this._score
      
@@ -48,7 +48,7 @@ class Game{
 
      public  isSpare=(score_1:number,score_2:number):Boolean=>{
 
-      return score_1+score_2 ===10
+      return this._rolls[score_1]+this._rolls[score_2] ===10
     }
 
 }
