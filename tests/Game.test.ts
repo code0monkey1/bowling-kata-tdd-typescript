@@ -51,15 +51,13 @@ describe('Bowling Game',()=>{
        const sut=game
 
        //Act
-       rollMany(2,5)
+       rollSpare()
        sut.roll(2)
 
        //Assert
        expect(sut.score).toBe(14)
 
    })
-
-
 
    const rollMany=(rolls:number,pins:number)=>{
    
@@ -68,7 +66,11 @@ describe('Bowling Game',()=>{
     }
      
    }
-
+   
+   const rollSpare=()=>{
+      game.roll(5)
+      game.roll(5)
+   }
 
 
 })

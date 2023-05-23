@@ -27,6 +27,16 @@
 
 > In this scenario , you get to bowl an extra ball  i.e ( 2 + 1 )
 
+---
+
+### Case 4 : Strike
+##### ( i.e When you get 10 pins in the very first go )
+
+![TDD](pictures/strike.png 'test driven development')
+
+> In this scenario , you get to bowl 2 extra balls after a strike  (1 + 2)
+
+---
 
 
 Config : 
