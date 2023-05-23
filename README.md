@@ -20,6 +20,15 @@
 
 ---
 
+### Case 3 : Spare is Thrown
+##### ( i.e When you score a combined 10 on a set eg: 4, 6 )
+
+![TDD](pictures/spare.png 'test driven development')
+
+> In this scenario , you get to bowl an extra ball  i.e ( 2 + 1 )
+
+
+
 Config : 
 
 1. Set up the node project 
