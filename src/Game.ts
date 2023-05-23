@@ -31,9 +31,8 @@ class Game{
         }
         else{
 
-          score+= this._rolls[roll_index]+
-                         this._rolls[roll_index+1]
-           roll_index+=2
+          score+= this.scoreInFrame(roll_index)
+          roll_index+=2
         }
          
     }
@@ -49,24 +48,28 @@ class Game{
     }
 
 
-     private  isSpare=(frameIndex:number):Boolean=>{
+     private  isSpare=(rollIndex:number):Boolean=>{
 
-      return this._rolls[frameIndex]+this._rolls[frameIndex+1] ===10
+      return this._rolls[rollIndex]+this._rolls[rollIndex+1] ===10
     }
 
-    private isStrike=(frameIndex:number):Boolean=>{
+    private isStrike=(rollIndex:number):Boolean=>{
 
-        return this._rolls[frameIndex]===10
+        return this._rolls[rollIndex]===10
     }
 
-    private strikeBonus=(frameIndex:number):number=>{
+    private strikeBonus=(rollIndex:number):number=>{
 
-        return this._rolls[frameIndex+1]
-               +this._rolls[frameIndex+2]
+        return this._rolls[rollIndex+1]
+               +this._rolls[rollIndex+2]
     }
    
-    private spareBonus=(frameIndex:number):number=>{
-      return this._rolls[frameIndex+2]
+    private spareBonus=(rollIndex:number):number=>{
+      return this._rolls[rollIndex+2]
+    }
+
+    private scoreInFrame=(rollIndex:number):number=>{
+      return this._rolls[rollIndex]+this._rolls[rollIndex+1]
     }
 
 
