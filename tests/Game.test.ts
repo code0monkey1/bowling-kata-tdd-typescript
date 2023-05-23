@@ -59,19 +59,19 @@ describe('Bowling Game',()=>{
 
    })
 
-   test("should score 28 for a strike followed by scores 5 , 4",()=>{  
+   test("should score 24 for a strike followed by scores 3 , 4",()=>{  
 
     //Arrange
     const sut=game
 
     //Act
     rollStrike()
-    game.roll(5)
-    game.roll(4)
+    sut.roll(3)
+    sut.roll(4)
 
     //Assert
 
-     expect(game.score).toBe(28)
+     expect(sut.score).toBe(24)
 
    })
 

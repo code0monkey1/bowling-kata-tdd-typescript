@@ -4,8 +4,6 @@
  * 
  */
 class Game{
-   
-
   
   private _rolls:number[] = Array(21).fill(0)
 
