@@ -19,9 +19,8 @@ describe('Bowling Game',()=>{
       
       const sut = new Game()
      
-      for (let i=0;i<10;i++){
+      for (let i=0;i<20;i++){
          sut.roll(0);
-         sut.roll(0)
       }
       // rollMany(game,10,0)
      
