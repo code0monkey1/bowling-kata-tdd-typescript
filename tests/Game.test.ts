@@ -1,5 +1,4 @@
 import Game from "../src/Game";
-import { rollMany } from "./GameTestHelper";
 
 describe('Bowling Game',()=>{
    
@@ -26,7 +25,7 @@ describe('Bowling Game',()=>{
       
       const sut = game
      
-      rollMany(game,20,0)
+      rollMany(20,0)
      
 
       expect(sut.score).toBe(0)
@@ -39,12 +38,22 @@ describe('Bowling Game',()=>{
          const sut= game
 
         // Act
-        rollMany(sut,20,1)
+        rollMany(20,1)
        
         // Assert
         expect(sut.score).toEqual(20)
     
    })
+
+
+
+   const rollMany=(rolls:number,pins:number)=>{
+   
+    for(let i=0;i<rolls;i++){
+        game.roll(pins)
+    }
+     
+   }
 
 
 

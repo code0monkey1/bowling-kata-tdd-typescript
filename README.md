@@ -14,7 +14,7 @@
 ---
 
 ### Case 2 : All ones game 
-##### (i.e When every ball knocks off 1 pin )
+##### ( i.e When every ball knocks off 1 pin )
 
 ![TDD](pictures/all-ones.png 'test driven development')
 
