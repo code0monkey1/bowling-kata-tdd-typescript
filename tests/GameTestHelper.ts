@@ -7,8 +7,3 @@ export const rollMany=(game:Game,rolls:number,pins:number)=>{
   }
 
 }
-
-export const isSpare=(score_1:number,score_2:number):Boolean=>{
-
-  return score_1+score_2 ===10
-}
