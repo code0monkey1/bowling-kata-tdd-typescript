@@ -53,7 +53,6 @@ describe('Bowling Game',()=>{
        //Act
        rollMany(2,5)
        sut.roll(2)
-       sut.roll(2)
 
        //Assert
        expect(sut.score).toBe(14)
