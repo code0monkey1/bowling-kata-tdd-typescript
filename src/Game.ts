@@ -17,21 +17,21 @@ class Game{
 
    const FRAMES=10
    
-   let roll_index=0
+   let frame_index=0
 
     for( let frame=0;frame<FRAMES;frame++){
        
-        if(this.isSpare(roll_index,roll_index+1)){
+        if(this.isSpare(frame_index)){
             
-            score= 10+this._rolls[roll_index+2]
-            roll_index+=2
+            score= 10+this._rolls[frame_index+2]
+            frame_index+=2
 
           }
         else{
 
-          score+= this._rolls[roll_index]+
-                         this._rolls[roll_index+1]
-           roll_index+=2
+          score+= this._rolls[frame_index]+
+                         this._rolls[frame_index+1]
+           frame_index+=2
         }
          
     }
@@ -47,9 +47,9 @@ class Game{
     }
 
 
-     public  isSpare=(score_1:number,score_2:number):Boolean=>{
+     public  isSpare=(frameIndex:number):Boolean=>{
 
-      return this._rolls[score_1]+this._rolls[score_2] ===10
+      return this._rolls[frameIndex]+this._rolls[frameIndex+1] ===10
     }
 
 }
