@@ -5,6 +5,13 @@
 
 ---
 
+### Case 1 : When the ball goes to the gutter 
+##### ( i.e No points scored )
+
+![TDD](pictures/gutter-game.png 'test driven development')
+
+
+
 Config : 
 
 1. Set up the node project 
