@@ -27,6 +27,13 @@ class Game{
             frame_index+=2
 
           }
+        else if(this.isStrike(frame_index)){
+            score+=10
+                    +this._rolls[frame_index+1]
+                    +this._rolls[frame_index+2]
+
+            frame_index++ 
+        }
         else{
 
           score+= this._rolls[frame_index]+
@@ -47,10 +54,17 @@ class Game{
     }
 
 
-     public  isSpare=(frameIndex:number):Boolean=>{
+     private  isSpare=(frameIndex:number):Boolean=>{
 
       return this._rolls[frameIndex]+this._rolls[frameIndex+1] ===10
     }
+
+    private isStrike=(frameIndex:number):Boolean=>{
+
+        return this._rolls[frameIndex]===10
+    }
+
+
 
 }
 
