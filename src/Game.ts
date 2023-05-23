@@ -21,15 +21,12 @@ class Game{
        
         if(this.isSpare(roll_index)){
             
-            score= 10+this._rolls[roll_index+2]
+            score= 10+this.spareBonus(roll_index)
             roll_index+=2
 
           }
         else if(this.isStrike(roll_index)){
-            score+=10
-                    +this._rolls[roll_index+1]
-                    +this._rolls[roll_index+2]
-
+            score+=10+this.strikeBonus(roll_index)
             roll_index++ 
         }
         else{
@@ -62,6 +59,15 @@ class Game{
         return this._rolls[frameIndex]===10
     }
 
+    private strikeBonus=(frameIndex:number):number=>{
+
+        return this._rolls[frameIndex+1]
+               +this._rolls[frameIndex+2]
+    }
+   
+    private spareBonus=(frameIndex:number):number=>{
+      return this._rolls[frameIndex+2]
+    }
 
 
 }
