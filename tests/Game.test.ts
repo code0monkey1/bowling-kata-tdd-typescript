@@ -80,7 +80,7 @@ describe('Bowling Game',()=>{
     const sut=game
     
     //Act
-    rollMany(21,10)
+    rollMany(12,10)
 
     //Assert
     expect(sut.score).toBe(300)
