@@ -45,7 +45,7 @@ describe('Bowling Game',()=>{
     
    })
 
-   test("should score 12 for a spare and then for a 2 ponter extra",()=>{
+   test("should score 14 for a spare and then for a 2 ponter extra",()=>{
       
        //Arrange
        const sut=game
