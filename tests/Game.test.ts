@@ -1,12 +1,19 @@
-import Game from "../src/Game"
-import { rollMany } from "./GameTestHelper"
+import Game from "../src/Game";
+import { rollMany } from "./GameTestHelper";
 
 describe('Bowling Game',()=>{
    
+  let game:Game=new Game;
+  
+  beforeEach(()=>{
+
+    game= new Game()
+
+  })
   test('Game should exist',()=>{
        
         //Arrange
-        const sut = new Game()
+        const sut = game
 
         //Act
 
@@ -17,30 +24,28 @@ describe('Bowling Game',()=>{
   })
    test("should score zero for a gutter game",()=>{
       
-      const sut = new Game()
+      const sut = game
      
-      for (let i=0;i<20;i++){
-         sut.roll(0);
-      }
-      // rollMany(game,10,0)
+      rollMany(game,20,0)
      
 
       expect(sut.score).toBe(0)
 
    })
 
-   test("should score 9 for a set with 5 and 4 , and the rest gutters",()=>{
+   test(" should score 20 for a set all ones ",()=>{
 
         // Arrange 
-         const sut= new Game()
+         const sut= game
 
         // Act
-        sut.roll(4);
-        sut.roll(5);
-
+        rollMany(sut,20,1)
+       
         // Assert
-        expect(sut.score).toEqual(9)
+        expect(sut.score).toEqual(20)
     
    })
+
+
 
 })
