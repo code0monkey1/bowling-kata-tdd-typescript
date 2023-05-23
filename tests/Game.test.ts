@@ -32,7 +32,7 @@ describe('Bowling Game',()=>{
 
    })
 
-   test(" should score 20 for a set all ones ",()=>{
+   test("should score 20 for a set all ones ",()=>{
 
         // Arrange 
          const sut= game
@@ -43,6 +43,21 @@ describe('Bowling Game',()=>{
         // Assert
         expect(sut.score).toEqual(20)
     
+   })
+
+   test("should score 12 for a spare and then for a 2 ponter extra",()=>{
+      
+       //Arrange
+       const sut=game
+
+       //Act
+       rollMany(2,5)
+       sut.roll(2)
+       sut.roll(2)
+
+       //Assert
+       expect(sut.score).toBe(14)
+
    })
 
 
