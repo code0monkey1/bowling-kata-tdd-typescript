@@ -43,7 +43,7 @@
 
 ![TDD](pictures/perfect.png  'prefect score') 
 
-> The pefect score you could achieve in bowling is 300
+> If the bowler knocks down all 10 pins in the tenth frame, the bowler is allowed to throw 3 balls for that frame. This allows for a potential of 12 strikes in a single game, and a maximum score of 300 points, a perfect game.
 
 ---
 
