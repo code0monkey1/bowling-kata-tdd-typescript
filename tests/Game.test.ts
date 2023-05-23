@@ -70,8 +70,20 @@ describe('Bowling Game',()=>{
     sut.roll(4)
 
     //Assert
+    expect(sut.score).toBe(24)
 
-     expect(sut.score).toBe(24)
+   })
+
+   test("should score 300 for a perfect game",()=>{
+
+    //Arrange 
+    const sut=game
+    
+    //Act
+    rollMany(21,10)
+
+    //Assert
+    expect(sut.score).toBe(300)
 
    })
 
