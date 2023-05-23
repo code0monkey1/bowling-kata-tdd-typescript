@@ -27,7 +27,12 @@ describe('Bowling Game',()=>{
 
       expect(sut.score).toBe(0)
 
+   })
 
+   test("should score 9 for a set with 5 and 4 , and the rest gutters",()=>{
+
+
+    
    })
 
 })
