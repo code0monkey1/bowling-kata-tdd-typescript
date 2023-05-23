@@ -17,13 +17,16 @@ describe('Bowling Game',()=>{
   })
    test("should score zero for a gutter game",()=>{
       
-      const game = new Game()
+      const sut = new Game()
      
-      
-      rollMany(game,10,0)
+      for (let i=0;i<10;i++){
+         sut.roll(0);
+         sut.roll(0)
+      }
+      // rollMany(game,10,0)
      
 
-      expect(game.score).toBe(0)
+      expect(sut.score).toBe(0)
 
 
    })

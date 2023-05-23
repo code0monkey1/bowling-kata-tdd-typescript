@@ -14,6 +14,11 @@ class Game{
     return  this._score
   }
 
+  public roll(pins:number){
+
+   this. _score+=pins
+  }
+
 }
 
 
